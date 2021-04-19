@@ -9,7 +9,6 @@ module Mutations
     def resolve(product_id: nil)
       val = 1
       @product = Product.find(product_id)
-      require 'pry'; binding.pry
       @product.update(stop_bid: val)
 
       @products = Product.find(product_id)

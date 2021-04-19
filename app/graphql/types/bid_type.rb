@@ -1,7 +1,7 @@
 module Types
   class BidType < Types::BaseObject
     field :id, ID, null: false
-    field :user, Types::UserType, null: false
+    field :user, UserType, null: false, method: :user
     field :product, Types::ProductType, null: false
     field :bid_amount, Integer, null: false
     field :status, Boolean, null: true

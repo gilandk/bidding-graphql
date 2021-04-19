@@ -24,6 +24,7 @@ class GraphqlController < ApplicationController
   end
 
   def context
+    require 'pry'; binding.pry
     {
       session: session,
       current_user: AuthToken.user_from_token(session[:token])
